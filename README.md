@@ -72,4 +72,4 @@
 		// verify_status.setText(name);
 			Log.i("debug", "===========" + Thread.currentThread().getName());
 		}
-}
+	}
