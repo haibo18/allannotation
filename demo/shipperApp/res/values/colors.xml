@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <drawable name="bg_drawable">#ffcccccc</drawable>
+    <drawable name="white_drawable">#ffffffff</drawable>
+    <drawable name="radio_blue">#ff0054b4</drawable>
+    
+    <color name="bg">#fff7f7f7</color>
+    <color name="white">#ffffffff</color>
+    <color name="color_black">#ff000000</color>
+    <color name="main_navigator_text_blue">#ff0054b4</color>
+    <color name="main_navigator_text_blue_dark">#ff2a3552</color>
+    <color name="main_navigator_text_gray">#ff929292</color>
+    <color name="line_gray">#ff1166bc</color>
+    <color name="ex_cacheColorHint">#abcdefff</color>
+    <color name="ex_listSelector">#cccccccc</color>
+    <color name="press">#e8e8e8</color>
+    <color name="line">#FFEEEEEE</color>
+    
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.qm.activity.Activity_Main" >
+
+    <cn.qm.widget.MyViewPager
+        android:id="@+id/viewpager_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp" >
+    </cn.qm.widget.MyViewPager>
+
+    <RadioGroup
+        android:id="@+id/main_tab_group"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navi_height"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:checkedButton="@+id/main_tab_action"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/main_tab_action"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_home_btn_bg3"
+            android:gravity="center_horizontal"
+            android:text="@string/action"
+            android:textColor="@color/selector_main_navigator_text_color" />
+
+        <RadioButton
+            android:id="@+id/main_tab_center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_home_btn_bg4"
+            android:gravity="center_horizontal"
+            android:text="@string/personal_center"
+            android:textColor="@color/selector_main_navigator_text_color" />
+    </RadioGroup>
+
+</RelativeLayout>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:background="@color/main_navigator_text_blue" >
+
+        <TextView
+            android:id="@+id/back"
+            style="@style/back"
+            android:text="@string/back" />
+
+        <TextView
+            style="@style/title"
+            android:text="@string/zcfh" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_ten" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_ten"
+                android:weightSum="10" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_weight="3"
+                    android:text="@string/spend_time" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/center_height"
+                    android:layout_weight="1" />
+
+                <cn.qm.widget.MyEditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="6" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_ten" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:text="@string/contract" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/center_height"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_ten" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:text="@string/load_location" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/center_height"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_ten" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:text="@string/unload_location" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/center_height"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_ten" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:text="@string/receiver_contract" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/center_height"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_ten" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:text="@string/typeofcar" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/center_height"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_ten" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:text="@string/goods_desc" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/center_height"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_ten" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:text="@string/trade_pattern" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/center_height"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_ten" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:text="@string/transport_price" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/center_height"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <Button
+                style="@style/mybutton"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/margin_ten"
+                android:text="@string/confirm_submit" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

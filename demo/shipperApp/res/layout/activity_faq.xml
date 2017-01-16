@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:background="@color/main_navigator_text_blue" >
+
+        <TextView
+            android:id="@+id/back"
+            style="@style/back"
+            android:text="@string/back" />
+
+        <TextView
+            style="@style/title"
+            android:text="@string/faq" />
+    </RelativeLayout>
+
+    <ExpandableListView
+        android:id="@+id/exListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_ten"
+		style="@style/expandable_listview">
+    </ExpandableListView>
+
+</LinearLayout>

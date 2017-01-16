@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/taskStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/onAll"
+        android:layout_margin="@dimen/margin_ten"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/onAll"
+            style="@style/order_navi_style"
+            android:text="@string/all" />
+
+        <RadioButton
+            android:id="@+id/onDispatch"
+            style="@style/order_navi_style"
+            android:text="@string/dispatch" />
+
+        <RadioButton
+            android:id="@+id/onConfirm"
+            style="@style/order_navi_style"
+            android:text="@string/confirm" />
+
+        <RadioButton
+            android:id="@+id/onTransport"
+            style="@style/order_navi_style"
+            android:text="@string/transport" />
+
+        <RadioButton
+            android:id="@+id/onGet"
+            style="@style/order_navi_style"
+            android:text="待收货" />
+
+        <RadioButton
+            android:id="@+id/onBalance"
+            style="@style/order_navi_style"
+            android:text="@string/balance" />
+
+        <RadioButton
+            android:id="@+id/onEvaluate"
+            style="@style/order_navi_style"
+            android:text="@string/evaluate" />
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/order_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+
+</LinearLayout>

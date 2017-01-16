@@ -1,0 +1,85 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="Theme.NoTitle" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:textColor">@color/color_black</item>
+    </style>
+
+    <style name="mybutton">
+        <item name="android:background">@drawable/button</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+    </style>
+
+    <style name="order_navi_style" parent="android:Widget.CompoundButton.RadioButton">
+        <item name="android:background">@drawable/selector_monitor_monitor_header</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/selector_sub_fragment_monitor_monitor_text_color</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/order_navi_height</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="order_detail_navi_style" parent="android:Widget.CompoundButton.RadioButton">
+        <item name="android:background">@drawable/selector_monitor_monitor_header</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/selector_sub_fragment_monitor_monitor_text_color</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_width">65dp</item>
+        <item name="android:layout_height">30dp</item>
+    </style>
+
+    <style name="whiteText" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="title" parent="whiteText">
+        <item name="android:textSize">@dimen/sub_title</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="back" parent="whiteText">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginLeft">@dimen/margin_ten</item>
+        <item name="android:drawableLeft">@drawable/arrow</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawablePadding">5dp</item>
+    </style>
+
+    <style name="expandable_listview" parent="android:Widget.ExpandableListView">
+        <item name="android:background">@color/white</item>
+        <item name="android:cacheColorHint">@color/ex_cacheColorHint</item>
+        <item name="android:listSelector">@color/ex_listSelector</item>
+        <item name="android:groupIndicator">@drawable/selector_expandablelistview_message</item>
+        <item name="android:divider">@color/bg</item>
+        <item name="android:childDivider">@color/bg</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <style name="dialogFullscreen">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>

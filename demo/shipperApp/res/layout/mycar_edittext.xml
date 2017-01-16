@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <EditText
+        android:id="@+id/mycar_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/input_frame"
+        android:padding="5dp"
+        android:saveEnabled="true"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/font_size" />
+
+    <ImageView
+        android:id="@+id/mycar_imageview_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/mycar_edittext"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:visibility="invisible"
+        android:src="@drawable/index_button_09" />
+
+</RelativeLayout>

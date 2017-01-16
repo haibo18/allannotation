@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:background="@color/main_navigator_text_blue" >
+
+        <TextView
+            android:id="@+id/back"
+            style="@style/back"
+            android:text="@string/back" />
+
+        <TextView
+            style="@style/title"
+            android:text="@string/check_new" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_five"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_weight="7"
+            android:text="@string/current_version" />
+
+        <Button
+            style="@style/mybutton"
+            android:layout_width="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_weight="3"
+            android:text="@string/check_new_version" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_five"
+        android:text="@string/availble_version" />
+
+    <Button
+        style="@style/mybutton"
+        android:layout_width="wrap_content"
+        android:background="@color/bg"
+        android:textColor="@color/color_black"
+        android:padding="@dimen/margin_five"
+        android:layout_gravity="bottom|center_horizontal"
+        android:text="@string/update" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
