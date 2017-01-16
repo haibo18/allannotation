@@ -1,7 +1,7 @@
  allannotation
 
 实现安卓activity，fragment的全注解，并且实现了20多种view事件的全注解实现
-例子如下：
+,包括事件总线的实现，例子如下
 @Bus
 @ViewId(R.layout.main_fragment_center)
 public class Main_Fragment_Center extends BaseFragment {
@@ -70,4 +70,4 @@ public class Main_Fragment_Center extends BaseFragment {
 	public void a(String name) {
 		// verify_status.setText(name);
 		Log.i("debug", "===========" + Thread.currentThread().getName());
-	}
+	
