@@ -20,6 +20,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Executor;
 
+import android.os.Handler;
 import android.util.Log;
 import cn.qm.annotation.Subscribe;
 import cn.qm.application.IApplication;
@@ -31,7 +32,8 @@ public class Bus2 {
 	private static Bus2 bus;
 	public static final int UI_THREAD = 0;
 	public static final int WORKER_THREAD = 1;
-
+	public static final int POSTING_THREAD = 2;
+	private Handler handler = new Handler();
 	/** 线程安全的单例 */
 	public static Bus2 getDefault() {
 		if (null == bus) {
@@ -164,9 +166,16 @@ public class Bus2 {
 								Method met1 = executor.getClass().getMethod("submit", Runnable.class);
 								met1.setAccessible(true);
 								met1.invoke(executor, obj1);
-							} else {
+							} else if (value == POSTING_THREAD) {
 								met.setAccessible(true);
 								met.invoke(o, obj);
+							} else {
+								InvocationHandler handl = new DynamicProxy2(met, o, obj);
+								Object obj1 = Proxy.newProxyInstance(handl.getClass().getClassLoader(), new Class[] { Runnable.class }, handl);
+								Executor executor = IApplication.getInstance().executorService;
+								Method met2 = handler.getClass().getMethod("post", Runnable.class);
+								met2.setAccessible(true);
+								met2.invoke(handler, obj1);
 							}
 						} catch (Exception e) {
 							e.printStackTrace();
@@ -204,6 +213,33 @@ public class Bus2 {
 			return null;
 		}
 
+	}
+	
+	private class DynamicProxy2 implements InvocationHandler {
+		
+		private Object obj;
+		private Method met;
+		private Object[] para;
+		
+		/**
+		 * @param met
+		 */
+		public DynamicProxy2(Method met, Object obj, Object[] para) {
+			super();
+			this.met = met;
+			this.obj = obj;
+			this.para = para;
+		}
+		
+		@Override
+		public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+			if (method.getName().equals("run")) {
+				met.setAccessible(true);
+				return met.invoke(obj, para);
+			}
+			return null;
+		}
+		
 	}
 
 	private Class[] getParameterTypes(Object... objs) {
